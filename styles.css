@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+:root {
+    --cyan: hsl(178, 100%, 50%);
+    --white: hsl(0, 0%, 100%);
+    --dark-blue-bg: hsl(217, 54%, 11%);
+    --dark-blue-card: hsl(216, 50%, 16%);
+    --dark-blue-line: hsl(215, 32%, 27%);
+    --soft-blue: hsl(215, 51%, 70%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: "Outfit", Tahoma, sans-serif;
+    background-color: var(--dark-blue-bg);
+    color: var(--soft-blue);
+}
+
+.container {
+    width: 25rem;
+    padding: 2rem;
+    border-radius: 20px;
+    background-color: var(--dark-blue-card);
+}
+
+.nft-picture {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.img-picture {
+    position: relative;
+}
+
+.eye-card {
+    visibility: hidden;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    border-radius: 10px;
+    top: 0;
+    background-color: hsla(178, 100%, 50%, 0.5);
+    transition-duration: 0.35s;
+}
+
+.img-picture:hover .eye-card{
+    visibility: visible;
+    cursor: pointer;
+}
+
+.nft-title:hover, .owner:hover{
+    
+    color: var(--cyan);
+    cursor: pointer;
+}
+
+
+.nft-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--white);
+    margin: 1rem 0;
+}
+
+.nft-info {
+    font-size: 1.2rem;
+    font-weight: 300;
+    margin: 8px 0;
+}
+
+.price-time {
+    display: flex;
+    justify-content:space-between;
+    margin: 1.5rem 0;
+    font-size: 1.2rem;
+}
+
+.price, .time {
+    display: flex;
+    gap: .5rem;
+}
+
+.price p {
+    color: var(--cyan);
+}
+
+hr {
+    border: none;
+    border-bottom: 1.5px solid var(--dark-blue-line);
+}
+
+.creator {
+    display: flex;
+    align-items: center;
+    margin: 1.2rem 0;
+    gap: 1.2rem;
+    font-size: 1.2rem;
+}
+
+.creator img {
+    width: 3rem;
+    border: 2px solid var(--white);
+    border-radius: 50%;
+}
+
+.owner {
+    color: var(--white);
+}
